@@ -1,0 +1,19 @@
+{
+	"name": "Node.js",
+	"build": { "dockerfile": "Dockerfile" },
+	"mounts": [
+	],
+	"runArgs": [
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+		// "--device", "/dev/dri",
+		// "--gpus","all"
+	],
+	"containerEnv": {
+		"DISPLAY": "unix${localEnv:DISPLAY}"
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+	// This doesn't work for some reason?
+	"postAttachCommand": "npm i",
+	// "remoteUser": "node"
+}
