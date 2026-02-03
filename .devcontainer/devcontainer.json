@@ -6,10 +6,10 @@
 	// Disable run args & env-rename on MacOS for it to work
 	// TODO: does it work without these on Linux somehow?
 	"runArgs": [
-        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+        // "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
 	],
 	"containerEnv": {
-		"DISPLAY": "unix${localEnv:DISPLAY}"
+		// "DISPLAY": "unix${localEnv:DISPLAY}"
 	},
 	"postAttachCommand": "npm i",
 	"customizations": {
