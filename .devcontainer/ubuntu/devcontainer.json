@@ -1,9 +1,8 @@
 {
-    "name": "Tauri",
+    "name": "Ubuntu",
     "build": { "dockerfile": "Dockerfile" },
-
     "postAttachCommand": "npm i",
-
+    "containerUser": "node",
     "privileged": true,
     "runArgs": [
         "--gpus", "all"
@@ -11,16 +10,10 @@
     "mounts": [
         "source=${localEnv:HOME},target=/var/home/${localEnv:USER},type=bind,consistency=cached",
         "source=tauri-test-home,target=/home/node/,type=volume",
-        "source=${localEnv:XDG_RUNTIME_DIR:/tmp/dummy}/pulse/native,target=${localEnv:XDG_RUNTIME_DIR:/tmp/dummy}/pulse/native,type=bind"
+        "source=${localEnv:XDG_RUNTIME_DIR}/pulse/native,target=${localEnv:XDG_RUNTIME_DIR}/pulse/native,type=bind"
     ],
     "containerEnv": {
         "XDG_SESSION_TYPE": "${localEnv:XDG_SESSION_TYPE}",
         "PULSE_SERVER": "${localEnv:XDG_RUNTIME_DIR}/pulse/native"
-    },
-
-    "customizations": {
-        "vscode": {
-            "extensions": ["rust-lang.rust-analyzer"]
-        }
     }
 }
