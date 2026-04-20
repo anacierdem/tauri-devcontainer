@@ -1,8 +1,9 @@
 {
 	"name": "Other",
 	"build": { "dockerfile": "../Dockerfile" },
-	"mounts": [
-	],
+    "mounts": [
+        "source=tauri-test-home,target=/home/node/,type=volume"
+    ],
 	"postAttachCommand": "npm i",
 	"customizations": {
         "vscode": {

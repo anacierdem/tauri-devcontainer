@@ -11,7 +11,7 @@ Very basic devcontainer setup for running headful Tauri. Works with Linux & MacO
 | Host OS | Basic support | HW acceleration | Audio |
 | --- | ----------- | --- | --- |
 | Fedora | ✅ | ✅ | Pulse Audio |
-| Ubuntu | TODO | TODO | TODO |
+| Ubuntu | ✅ | TODO | TODO |
 | Windows | TODO | TODO | TODO |
 | MacOS (x86) | TODO | ❌ | ❌ |
 | MacOS (ARM) | TODO | ❌ | ❌ |

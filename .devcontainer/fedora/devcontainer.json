@@ -15,5 +15,11 @@
     "containerEnv": {
         "XDG_SESSION_TYPE": "${localEnv:XDG_SESSION_TYPE}",
         "PULSE_SERVER": "${localEnv:XDG_RUNTIME_DIR}/pulse/native"
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": ["rust-lang.rust-analyzer"]
+        }
     }
 }
