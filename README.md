@@ -1,6 +1,6 @@
 # Tauri devcontainer setup
 
-Very basic devcontainer setup for running headful Tauri. Works with Linux & MacOS.
+Very basic devcontainer setup for running headful Tauri. Works with Linux & MacOS. Requires XQuartz on MacOS.
 
 ### Run the app
 
